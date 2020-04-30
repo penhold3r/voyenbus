@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+   <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Document</title>
+      <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+      <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js">
+      </script>
+
+      <link
+         href="https://securesite.voyenbus.com/services/bus-widget/css/jquery-ui-1.9.2.custom.css"
+         rel="stylesheet" type="text/css" />
+      <link href="https://securesite.voyenbus.com/services/bus-widget/css/bus.css" rel="stylesheet"
+         type="text/css" />
+
+      <!-- Buscador -->
+      <script type="text/javascript"
+         src="https://securesite.voyenbus.com/services/bus-widget/js/bus.js"></script>
+
+      <script type="text/javascript">
+         $(function () {
+            busearch({
+               agente: "NFH",
+               langDefault: "es_AR"
+            });
+         });
+      </script>
+   </head>
+
+   <body>
+
+
+      <div id="buscador">
+         <div class="cargador"></div>
+         <form autocomplete="off" id="bus_form" name="bus_form" method="post" action="#">
+            <div class="bus_lang">
+               <img id="bus_imgLang" />
+               <select name="bus_languageId" id="bus_languageId">
+                  <option value="es_AR" selected="selected">Espa&ntilde;ol</option>
+                  <option value="en_US">English</option>
+                  <option value="pt_BR">Portugués</option>
+                  <option value="fr_FR">Français</option>
+                  <option value="de_DE">Deutsch</option>
+               </select>
+            </div>
+            <div class="bus_venta"></div>
+            <p id="bus_radio">
+               <input type="radio" id="bus_ida" name="radio" checked="checked" value="ida" />
+               <label for="bus_ida" style="margin-right:7px"> </label>
+               <input type="radio" id="bus_vuelta" name="radio" value="vuelta" />
+               <label for="bus_vuelta"> </label>
+            </p>
+            <div class="links">
+               <a href="" class="bus_comprar"></a>
+               <a href="" class="bus_devoluciones"></a>
+               <a href="" class="bus_imprimir"></a>
+            </div>
+            <div class="bus_origenDestino">
+               <p>
+                  <label for="bus_origen">: </label>
+                  <br />
+                  <input autocomplete="off" type="search" id="bus_origen" class="ui-corner-all" />
+                  <input type="text" name="bus_origenId" id="bus_origenId" style="display: none;" />
+               </p>
+               <p>
+                  <label for="bus_destino">: </label>
+                  <br />
+                  <input autocomplete="off" type="search" id="bus_destino" class="ui-corner-all" />
+                  <input type="text" name="bus_destinoId" id="bus_destinoId"
+                     style="display: none;" />
+               </p>
+            </div>
+            <div class="bus_calendar">
+               <p>
+                  <label for="bus_salida">: </label> <br />
+                  <input type="text" name="bus_alt_salida" id="bus_alt_salida" readonly="readonly"
+                     class="ui-corner-all" />
+                  <input type="text" name="bus_salida" id="bus_salida" class="ui-corner-all"
+                     style="display: none;" />
+               </p>
+               <p>
+                  <label for="bus_regreso">: </label> <br />
+                  <input type="text" name="bus_alt_regreso" id="bus_alt_regreso" readonly="readonly"
+                     class="ui-corner-all" />
+                  <input type="text" name="bus_regreso" id="bus_regreso" class="ui-corner-all"
+                     style="display: none;" />
+               </p>
+            </div>
+            <div style="width: 493px;margin-top:10px;">
+               <div id="bus_buscar" /><span class="ico"></span> <span class="text"></span></div>
+            <img src="https://securesite.voyenbus.com/services/bus-widget/images/bus_logos.jpg"
+               alt="" style="vertical-align:middle;" />
+         </form>
+      </div>
+
+   </body>
+
+</html>
